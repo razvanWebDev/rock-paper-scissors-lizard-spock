@@ -20,13 +20,11 @@ body {
     background-size: cover;
 }
 
-
 #game-div {
     padding: 50px 100px 0 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 
@@ -45,6 +43,7 @@ body {
     background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
     padding: 2px 4px;
     border-radius: 10px;
+    cursor: default;
 }
 
 #user {
@@ -61,11 +60,13 @@ body {
     padding: 10px;
      border: 5px solid white;
      border-radius: 50px;
+     cursor: default;
  }
 
  #result {
      text-align: center;
      font-size: 30px;
+     cursor: default;
 
  }
 
@@ -79,7 +80,13 @@ body {
      border: 3px solid white;
      border-radius: 50%;
      width: 80px;
-     
+ }
+
+ .choice:hover {
+     cursor: pointer;
+     transform: scale(1.05);
+     transition-duration: .2s;
+
  }
 
  #p, #s {
