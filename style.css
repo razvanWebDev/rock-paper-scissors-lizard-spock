@@ -86,7 +86,10 @@ body {
      cursor: pointer;
      transform: scale(1.05);
      transition-duration: .2s;
+ }
 
+ .choice:active {
+     transform: scale(1);
  }
 
  #p, #s {
@@ -97,3 +100,22 @@ body {
  #l, #q {
      margin: 20px 20px 10px 30px;
  }
+
+ .greenGlow {
+    border: 5px solid rgb(60,179,113) !important;
+    box-shadow: 0 0 10px 5px  rgb(60,179,113);
+    transition: all .2s;
+
+}
+
+.yellowGlow {
+    border: 5px solid #FFDC00 !important;
+    box-shadow: 0 0 10px 5px #FFDC00;
+    transition: all .2s;
+}
+
+.redGlow {
+    border: 5px solid rgb(220,20,60) !important;
+    box-shadow: 0 0 10px 5px rgb(220,20,60);
+    transition: all .2s;
+}
