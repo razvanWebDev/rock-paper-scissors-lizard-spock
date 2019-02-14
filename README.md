@@ -1,4 +1,4 @@
-# Sheldon Coopers's
+# Sheldon Cooper's
 ## rock-paper-scissors-lizard-spock
 
 ### Live preview
