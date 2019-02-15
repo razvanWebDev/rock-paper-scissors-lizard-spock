@@ -34,7 +34,6 @@ body {
 }
 
 #sheldon {
-    margin-left: 125px;
     text-align: center;
     font-size: 20px;
 }
@@ -47,9 +46,12 @@ body {
 }
 
 #user {
-    margin-right: 125px;
     text-align: center;
     font-size: 20px;
+}
+
+#score {
+    min-width: 500px;
 }
 
 #scoreboard {
@@ -61,17 +63,19 @@ body {
      border: 5px solid white;
      border-radius: 50px;
      cursor: default;
+     margin: 10px auto;
  }
 
  #result {
      text-align: center;
      font-size: 30px;
      cursor: default;
+     margin-top: 45px;
 
  }
 
  #choices {
-     padding: 25px;
+     padding-top: 60px;
      text-align: center;
      
  }
