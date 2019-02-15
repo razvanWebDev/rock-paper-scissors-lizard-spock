@@ -10,8 +10,21 @@ var userScore_span = document.getElementById('user-score');
 var compScore_span = document.getElementById('comp-score');
 var userScore = 0;
 var compScore = 0;
+var userName = document.getElementById('user-name');
 
 result_p = document.getElementById('result');
+
+function getPlayerName(){
+    var playerName = prompt('Enter your name:');
+    if(playerName == ""){
+        userName.innerHTML = "Player";
+    }else if(playerName == null){
+        userName.innerHTML = "Player";
+    }else{
+        userName.innerHTML = playerName;
+    }    
+}
+
 
 
 function getCompChoice(compChoice) {
@@ -133,5 +146,5 @@ function initEevents() {
 
 
 
-
+getPlayerName();
 initEevents();
