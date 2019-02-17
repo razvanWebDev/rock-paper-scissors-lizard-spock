@@ -42,7 +42,7 @@ body {
     background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
     padding: 2px 4px;
     border-radius: 10px;
-    cursor: default;
+    cursor: pointer;
 }
 
 #user {

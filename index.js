@@ -4,27 +4,27 @@ var scissors = document.getElementById('s');
 var lizard = document.getElementById('l');
 var spock = document.getElementById('q');
 
-var scoreboard = document.getElementById('scoreboard');
-
 var userScore_span = document.getElementById('user-score');
 var compScore_span = document.getElementById('comp-score');
 var userScore = 0;
 var compScore = 0;
 var userName = document.getElementById('user-name');
 
-result_p = document.getElementById('result');
+var scoreboard = document.getElementById('scoreboard');
+var result_p = document.getElementById('result');
 
-function getPlayerName(){
+function getPlayerName() {
+    userScore = 0;
+    compScore = 0;
     var playerName = prompt('Enter your name:');
-    if(playerName == ""){
+    if (playerName == "") {
         userName.innerHTML = "Player";
-    }else if(playerName == null){
+    } else if (playerName == null) {
         userName.innerHTML = "Player";
-    }else{
+    } else {
         userName.innerHTML = playerName;
-    }    
+    } 
 }
-
 
 
 function getCompChoice(compChoice) {
@@ -32,6 +32,7 @@ function getCompChoice(compChoice) {
     var rndm = Math.floor(Math.random() * 5);
     return compChoice[rndm];
 }
+
 
 function fullWord(letter) {
     if (letter === 'r') {
@@ -52,7 +53,7 @@ function win(userChoice, computerChoice) {
     userScore++;
     result_p.innerHTML = fullWord(userChoice) + " beats " + fullWord(computerChoice) + "<br> You win!";
     scoreboard.classList.add('greenGlow');
-    setTimeout(function(){
+    setTimeout(function () {
         scoreboard.classList.remove('greenGlow')
     }, 500)
 }
@@ -61,7 +62,7 @@ function lose(userChoice, computerChoice) {
     compScore++;
     result_p.innerHTML = fullWord(userChoice) + " loses to " + fullWord(computerChoice) + "<br> You lose!";
     scoreboard.classList.add('redGlow');
-    setTimeout(function(){
+    setTimeout(function () {
         scoreboard.classList.remove('redGlow')
     }, 500)
 }
@@ -69,7 +70,7 @@ function lose(userChoice, computerChoice) {
 function draw(userChoice, computerChoice) {
     result_p.innerHTML = fullWord(userChoice) + " equals to " + fullWord(computerChoice) + "<br> It's a draw!";
     scoreboard.classList.add('yellowGlow');
-    setTimeout(function(){
+    setTimeout(function () {
         scoreboard.classList.remove('yellowGlow')
     }, 500)
 }
@@ -125,23 +126,25 @@ function game(userChoice, computerChoice) {
 function initEevents() {
     rock.addEventListener('click', function () {
         game('r');
-    })
+    });
 
     paper.addEventListener('click', function () {
         game('p');;
-    })
+    });
 
     scissors.addEventListener('click', function () {
         game('s');;
-    })
+    });
 
     lizard.addEventListener('click', function () {
         game('l');;
-    })
+    });
 
     spock.addEventListener('click', function () {
         game('q');;
-    })
+    });
+
+    userName.addEventListener('click', getPlayerName);
 }
 
 
