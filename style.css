@@ -1,12 +1,16 @@
-* { font-family: Verdana, Geneva, Tahoma, sans-serif;
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
-    -webkit-tap-highlight-color:transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
 header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 10px 0;
     background: url("img/header-background.png");
 }
 
@@ -22,14 +26,13 @@ body {
 }
 
 #rules {
-    
     min-width: 75px;
     text-align: center;
     font-weight: bold;
     border: 2px solid white;
     border-radius: 5px;
     padding: 2px;
-    position: absolute;
+    position: fixed;
     right: 40px;
     bottom: 40px;
     background-color: white;
@@ -38,7 +41,7 @@ body {
 
 #rules:hover {
     cursor: pointer;
-    color:white;
+    color: white;
     background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
     transition-duration: .2s;
 }
@@ -50,18 +53,17 @@ main table {
     margin: 75px auto;
 }
 
-
 main {
-   text-align: center; 
+    text-align: center;
 }
 
 #game-div {
-    padding: 50px 100px 0 100px;
+    height: 30vh;
+    padding-top: 5vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
-
 
 .players {
     width: 150px;
@@ -89,66 +91,60 @@ main {
     font-size: 20px;
 }
 
-#score {
-    min-width: 500px;
-}
-
 #scoreboard {
-    
     width: 175px;
     text-align: center;
     font-size: 35px;
     padding: 10px;
-     border: 5px solid white;
-     border-radius: 50px;
-     cursor: default;
-     margin: 10px auto;
- }
+    border: 5px solid white;
+    border-radius: 50px;
+    cursor: default;
+    margin: 10px auto;
+}
 
- #result {
-     text-align: center;
-     font-size: 30px;
-     cursor: default;
-     margin-top: 45px;
+#result {
+    text-align: center;
+    font-size: 30px;
+    cursor: default;
+    margin-top: 45px;
+}
 
- }
+#choices {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
- #choices {
-     padding-top: 60px;
-     text-align: center;
-     
- }
+.choice {
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 80px;
+}
 
- .choice {
-     border: 3px solid white;
-     border-radius: 50%;
-     width: 80px;
- }
+.choice:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition-duration: .2s;
+}
 
- .choice:hover {
-     cursor: pointer;
-     transform: scale(1.05);
-     transition-duration: .2s;
- }
+.choice:active {
+    transform: scale(1);
+}
 
- .choice:active {
-     transform: scale(1);
- }
+#p, #s {
+    margin: 10px 70px;
+}
 
- #p, #s {
-     margin: 10px 70px ;
-     
- }
+#l, #q {
+    margin: 20px 20px 10px 30px;
+}
 
- #l, #q {
-     margin: 20px 20px 10px 30px;
- }
-
- .greenGlow {
-    border: 5px solid rgb(60,179,113) !important;
-    box-shadow: 0 0 10px 5px  rgb(60,179,113);
+.greenGlow {
+    border: 5px solid rgb(60, 179, 113) !important;
+    box-shadow: 0 0 10px 5px rgb(60, 179, 113);
     transition: all .2s;
-
 }
 
 .yellowGlow {
@@ -158,7 +154,34 @@ main {
 }
 
 .redGlow {
-    border: 5px solid rgb(220,20,60) !important;
-    box-shadow: 0 0 10px 5px rgb(220,20,60);
+    border: 5px solid rgb(220, 20, 60) !important;
+    box-shadow: 0 0 10px 5px rgb(220, 20, 60);
     transition: all .2s;
+}
+
+@media screen and (max-width: 1024px) {
+    header h1 {
+        font-size: 40px;
+    }
+    #game-div {
+        padding:100px 20px;
+    }
+    #user {
+        width: 30%;
+    }
+    #sheldon {
+        width: 30%;
+    }
+    .players {
+        width: 100%;
+    }
+    .player-name {
+        font-size: 30px;
+    }
+    #result {
+        font-size: 35px;
+    }
+    .choice {
+        width: 150px;
+    }
 }
