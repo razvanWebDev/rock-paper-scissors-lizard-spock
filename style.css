@@ -61,13 +61,14 @@ main {
     height: 30vh;
     padding-top: 5vh;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
 }
 
 .players {
     width: 150px;
     border-radius: 10px;
+    
 }
 
 #sheldon {
@@ -103,10 +104,11 @@ main {
 }
 
 #result {
+    min-width: 420px;
     text-align: center;
     font-size: 30px;
     cursor: default;
-    margin-top: 45px;
+    margin: 45px 50px 0;
 }
 
 #choices {
