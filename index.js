@@ -93,7 +93,7 @@ function game(userChoice, computerChoice) {
             win(userChoice, computerChoice);
             break;
 
-        // lozers
+        // losers
         case 'ps':
         case 'rp':
         case 'lr':
